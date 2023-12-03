@@ -20,3 +20,13 @@ Tasks to complete during Thanksgiving break (written after 11/16/23 meeting):
 8) Maybe just getting a count for how many BNS events happened in O3 compared to this number in O4 would be interesting by itself. I woudl assume that O4 would see more of these events since it's more sensitive. 
 
 9) How did Chance pull data from GWTC (from two years ago)? We could get much more data there (from O1 and O2?). I don't know if it has data from O3 or O4, though. This would be good to show a continuous improvement in the type of events LIGO has been observing over all four of the experimental and software upgrades. (https://gwosc.org/eventapi/html/GWTC/)
+
+11/30/23
+
+10) 8 Dfs in total (4 BNS and 4 BBH across all 4 observing runs)
+
+11) CLEARLY define how we will determine the differences between 
+
+12) to the linear line: Dr. Q's thought: O4 seems more alligned to the m1 = m2 line. Does O4 have more BNS events? 
+
+13) Figure out final meeting time of the semester
