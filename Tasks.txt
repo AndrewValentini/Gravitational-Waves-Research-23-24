@@ -21,6 +21,9 @@ Tasks to complete during Thanksgiving break (written after 11/16/23 meeting):
 
 15) How can we use this data for cosmological questions? (luminosity distances/redshift). How hard would it be to infer a Hubble constant from this? 
 
+16) Begin making t-SNE plots for the O1-O3 data (wait on O4... at least I know the parameters are the same for the GWTC data...they have luminosity distances too)
+
+17) Make more scatter plots for O1-O3 with parameters other than masses and snr. Try redshift, chi_sq, luminosity distances, etc. 
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------

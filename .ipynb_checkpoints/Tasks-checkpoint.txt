@@ -1,22 +1,48 @@
 Tasks to complete during Thanksgiving break (written after 11/16/23 meeting):
 
+3) Figure out what the coalescence phase is 
+
+5) Specific to the mass1/mass2 scatter plot: maybe figure out a way to quantitatively determine how alligned O3 and O4's mass1 & mass2 data is to the line where mass1 = mass2. Visually, it looks like O4 is more aligned with the this line while the O3 data tends to have more events where mass1 is much higher than mass2
+
+6) Figure out a way to calculate luminosity distance for each event (so we have another parameter we can use to distinguish O3 from O4) or determine a way to get this directly from the data. We have this data for O1-O3 but it isn't given for O4. How can we determine it? 
+ 
+
+11/30/23
+
+11) CLEARLY define how we will determine the differences between 
+
+12) to the linear line: Dr. Q's thought: O4 seems more alligned to the m1 = m2 line. Does O4 have more BNS events? 
+
+13) Figure out final meeting time of the semester
+
+12/3/23
+
+14) What are ways to quantify scatter plots? 
+
+15) How can we use this data for cosmological questions? (luminosity distances/redshift). How hard would it be to infer a Hubble constant from this? 
+
+16) Begin making t-SNE plots for the O1-O3 data (wait on O4... at least I know the parameters are the same for the GWTC data...they have luminosity distances too)
+
+17) Make more scatter plots for O1-O3 with parameters other than masses and snr. Try redshift, chi_sq, luminosity distances, etc. 
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+COMPLETED: 
+
 1) Get the team familiar with using GitHub and begin uploading all of our current work onto it so we can collaboratively code
 
 2) Get the notion site updated (a link to it can then be provided in the GitHub page)
-
-3) Figure out what the coalescence phase is 
 
 4) Be able to distinguish between the BBH and BNS merger data so we can group them separately in the t-SNE plots
 -> Maybe the distribution in parameters for BNS events are very different between O3 and O4 while the same parameter distribution for BBH events is very similar. We want to catch this if it is the case. 
 -> This could be done by giving each scatter point on the t-SNE plot a number or color hex value so we know where each data point is on the t-SNE. 
 -> Having the t-SNE plots is nice but we would like to be able ot tell which specific parameters are causing the two very distinct groups in O3 and O4. Maybe only a single parameter such as the chirp masses is what is causing this (very unlikely)... these are some of the motivating thoughts. 
 
-5) Specific to the mass1/mass2 scatter plot: maybe figure out a way to quantitatively determine how alligned O3 and O4's mass1 & mass2 data is to the line where mass1 = mass2. Visually, it looks like O4 is more aligned with the this line while the O3 data tends to have more events where mass1 is much higher than mass2
-
-6) Figure out a way to calculate luminosity distance for each event (so we have another parameter we can use to distinguish O3 from O4) or determine a way to get this directly from the data.
-
 7) Specific to the histogram plots : what was the formula for determining the optimal bin size for a histogram? Figure this out and implement it into the histogram plots currently made so that these comparisons are more meaningful. 
 
-8) Maybe just getting a count for how many BNS events happened in O3 compared to this number in O4 would be interesting by itself. I woudl assume that O4 would see more of these events since it's more sensitive. 
+8) Maybe just getting a count for how many BNS events happened in O3 compared to this number in O4 would be interesting by itself. I would assume that O4 would see more of these events since it's more sensitive. 
 
 9) How did Chance pull data from GWTC (from two years ago)? We could get much more data there (from O1 and O2?). I don't know if it has data from O3 or O4, though. This would be good to show a continuous improvement in the type of events LIGO has been observing over all four of the experimental and software upgrades. (https://gwosc.org/eventapi/html/GWTC/)
+
+10) 8 Dfs in total (4 BNS and 4 BBH across all 4 observing runs)
