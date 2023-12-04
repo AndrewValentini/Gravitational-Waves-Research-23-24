@@ -25,6 +25,9 @@ Tasks to complete during Thanksgiving break (written after 11/16/23 meeting):
 
 17) Make more scatter plots for O1-O3 with parameters other than masses and snr. Try redshift, chi_sq, luminosity distances, etc. 
 
+18) Make t-SNE plot for O1-O4 with more parameters (first determine what the parameters ARE that can be used across all O1-O4... example: luminosity distance isn't defined for O4 but is for O1-O3). 
+
+19) Could Dr. Quashnock give us a summary of redshift? The larger the redshift, the faster the object is moving away from us? How is this value determined? What are some common redshift values? 
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
