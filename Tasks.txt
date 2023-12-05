@@ -5,7 +5,7 @@ Tasks to complete during Thanksgiving break (written after 11/16/23 meeting):
 5) Specific to the mass1/mass2 scatter plot: maybe figure out a way to quantitatively determine how alligned O3 and O4's mass1 & mass2 data is to the line where mass1 = mass2. Visually, it looks like O4 is more aligned with the this line while the O3 data tends to have more events where mass1 is much higher than mass2
 
 6) Figure out a way to calculate luminosity distance for each event (so we have another parameter we can use to distinguish O3 from O4) or determine a way to get this directly from the data. We have this data for O1-O3 but it isn't given for O4. How can we determine it? 
- 
+
 
 11/30/23
 
@@ -17,9 +17,31 @@ Tasks to complete during Thanksgiving break (written after 11/16/23 meeting):
 
 12/3/23
 
-14) What are ways to quantify scatter plots? 
-
 15) How can we use this data for cosmological questions? (luminosity distances/redshift). How hard would it be to infer a Hubble constant from this? 
+
+16) Begin making t-SNE plots for the O1-O3 data (wait on O4... at least I know the parameters are the same for the GWTC data...they have luminosity distances too)
+
+17) Make more scatter plots for O1-O3 with parameters other than masses and snr. Try redshift, chi_sq, luminosity distances, etc. 
+
+18) Make t-SNE plot for O1-O4 with more parameters (first determine what the parameters ARE that can be used across all O1-O4... example: luminosity distance isn't defined for O4 but is for O1-O3). 
+
+19) Could Dr. Quashnock give us a summary of redshift? The larger the redshift, the faster the object is moving away from us? How is this value determined? What are some common redshift values? 
+
+20) Make own function to create KDEs (just to know how they work)
+
+21) Determine statistical methods to quantify scatter plots that have a non-linear distribution (PCC and SCC are both used for determining how linear a line is). ChatGPT recommends: Regression models (you already know how to use these with numpy. Maybe figure out how to code them for yourself?), Local Methods (LOESS), Distance Metrics, Machine Learning models (Decision trees, random forests... would be overkill for our use case but would be good to learn how they work). 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -43,3 +65,5 @@ COMPLETED:
 9) How did Chance pull data from GWTC (from two years ago)? We could get much more data there (from O1 and O2?). I don't know if it has data from O3 or O4, though. This would be good to show a continuous improvement in the type of events LIGO has been observing over all four of the experimental and software upgrades. (https://gwosc.org/eventapi/html/GWTC/)
 
 10) 8 Dfs in total (4 BNS and 4 BBH across all 4 observing runs)
+
+14) What are ways to quantify scatter plots?  12/4/23: Have used Pearson correlation coefficient and Spearman rank correlation coefficient. 
