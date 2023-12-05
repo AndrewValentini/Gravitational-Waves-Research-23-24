@@ -27,8 +27,6 @@ Tasks to complete during Thanksgiving break (written after 11/16/23 meeting):
 
 19) Could Dr. Quashnock give us a summary of redshift? The larger the redshift, the faster the object is moving away from us? How is this value determined? What are some common redshift values? 
 
-20) Make own function to create KDEs (just to know how they work)
-
 21) Determine statistical methods to quantify scatter plots that have a non-linear distribution (PCC and SCC are both used for determining how linear a line is). ChatGPT recommends: Regression models (you already know how to use these with numpy. Maybe figure out how to code them for yourself?), Local Methods (LOESS), Distance Metrics, Machine Learning models (Decision trees, random forests... would be overkill for our use case but would be good to learn how they work). 
 
 
@@ -67,3 +65,5 @@ COMPLETED:
 10) 8 Dfs in total (4 BNS and 4 BBH across all 4 observing runs)
 
 14) What are ways to quantify scatter plots?  12/4/23: Have used Pearson correlation coefficient and Spearman rank correlation coefficient. 
+
+20) Make own function to create KDEs (just to know how they work) 12/4/23 : I don't know how to smooth the line (it currently looks like a spiderweb). I'll just leave it alone for now. It's not that important. 
