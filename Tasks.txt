@@ -1,7 +1,5 @@
 Tasks to complete during Thanksgiving break (written after 11/16/23 meeting):
 
-3) Figure out what the coalescence phase is 
-
 5) Specific to the mass1/mass2 scatter plot: maybe figure out a way to quantitatively determine how alligned O3 and O4's mass1 & mass2 data is to the line where mass1 = mass2. Visually, it looks like O4 is more aligned with the this line while the O3 data tends to have more events where mass1 is much higher than mass2
 
 6) Figure out a way to calculate luminosity distance for each event (so we have another parameter we can use to distinguish O3 from O4) or determine a way to get this directly from the data. We have this data for O1-O3 but it isn't given for O4. How can we determine it? 
@@ -67,3 +65,5 @@ COMPLETED:
 14) What are ways to quantify scatter plots?  12/4/23: Have used Pearson correlation coefficient and Spearman rank correlation coefficient. 
 
 20) Make own function to create KDEs (just to know how they work) 12/4/23 : I don't know how to smooth the line (it currently looks like a spiderweb). I'll just leave it alone for now. It's not that important. 
+
+3) Figure out what the coalescence phase is. 12/7/23: Coalescence phase (given in radians) refers to the phase of the waveform that the coalescence happened at (at what point along the cycle of the waveform did the coalescence happen?)
