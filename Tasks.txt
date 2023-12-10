@@ -27,7 +27,7 @@ Tasks to complete during Thanksgiving break (written after 11/16/23 meeting):
 
 21) Determine statistical methods to quantify scatter plots that have a non-linear distribution (PCC and SCC are both used for determining how linear a line is). ChatGPT recommends: Regression models (you already know how to use these with numpy. Maybe figure out how to code them for yourself?), Local Methods (LOESS), Distance Metrics, Machine Learning models (Decision trees, random forests... would be overkill for our use case but would be good to learn how they work). 
 
-
+22) 12/10/23: WANT: to show that LIGO has been able to see more distant events with weaker signals and events whose physical properties make the generated waveform less apparent in the data. Followup: this woudl be a good way to anlayze WHAT physical properties make a GW signal weaker. I have shown that the distance awequal component masses 
 
 
 
