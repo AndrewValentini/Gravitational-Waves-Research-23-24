@@ -11,8 +11,6 @@ Tasks to complete during Thanksgiving break (written after 11/16/23 meeting):
 
 12) to the linear line: Dr. Q's thought: O4 seems more alligned to the m1 = m2 line. Does O4 have more BNS events? 
 
-13) Figure out final meeting time of the semester
-
 12/3/23
 
 15) How can we use this data for cosmological questions? (luminosity distances/redshift). How hard would it be to infer a Hubble constant from this? 
@@ -23,11 +21,20 @@ Tasks to complete during Thanksgiving break (written after 11/16/23 meeting):
 
 18) Make t-SNE plot for O1-O4 with more parameters (first determine what the parameters ARE that can be used across all O1-O4... example: luminosity distance isn't defined for O4 but is for O1-O3). 
 
-19) Could Dr. Quashnock give us a summary of redshift? The larger the redshift, the faster the object is moving away from us? How is this value determined? What are some common redshift values? 
-
 21) Determine statistical methods to quantify scatter plots that have a non-linear distribution (PCC and SCC are both used for determining how linear a line is). ChatGPT recommends: Regression models (you already know how to use these with numpy. Maybe figure out how to code them for yourself?), Local Methods (LOESS), Distance Metrics, Machine Learning models (Decision trees, random forests... would be overkill for our use case but would be good to learn how they work). 
 
-22) 12/10/23: WANT: to show that LIGO has been able to see more distant events with weaker signals and events whose physical properties make the generated waveform less apparent in the data. Followup: this woudl be a good way to anlayze WHAT physical properties make a GW signal weaker. I have shown that the distance awequal component masses 
+22) 12/10/23: WANT: to show that LIGO has been able to see more distant events with weaker signals and events whose physical properties make the generated waveform less apparent in the data. Followup: this woudl be a good way to anlayze WHAT physical properties make a GW signal weaker. I have shown that the distance away from equal component masses does not correspond to a weaker SNR (it looks like there is almost no correlation at all). Continue asking similar questions and figure out ways to answer them. 
+
+
+After 12/12/23 Meeting: 
+
+23) Determine the predicted Hubble constant from the luminosity distance/redshift plot? Would there be a way to infer the Hubble constant from multiple lines fitted to a single scatter plot? (maybe events with lower luminosity distance create a smaller Hubble constant than events with higher luminosity distance?)
+
+-> Does the inferred Hubble constant change over O1-O3?
+
+24) Andrew : results from d(m_1 = m_2) do not normalize by masses. Results are not meaningful right now (still believe that there should be a inverse relationship between the distance away from this line and SNR). See what happens when you make distinct data for BNS and BBH events. (maybe use a log/log plot?)
+
+25) We expect that events with the same parameters would have a higher SNR from O1-O4. How can we test this hypothesis? (would like to attempt to answer before end of year)
 
 
 
