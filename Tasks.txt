@@ -13,8 +13,6 @@ Tasks to complete during Thanksgiving break (written after 11/16/23 meeting):
 
 12/3/23
 
-15) How can we use this data for cosmological questions? (luminosity distances/redshift). How hard would it be to infer a Hubble constant from this? 
-
 16) Begin making t-SNE plots for the O1-O3 data (wait on O4... at least I know the parameters are the same for the GWTC data...they have luminosity distances too)
 
 17) Make more scatter plots for O1-O3 with parameters other than masses and snr. Try redshift, chi_sq, luminosity distances, etc. 
@@ -28,7 +26,7 @@ Tasks to complete during Thanksgiving break (written after 11/16/23 meeting):
 
 After 12/12/23 Meeting: 
 
-23) Determine the predicted Hubble constant from the luminosity distance/redshift plot? Would there be a way to infer the Hubble constant from multiple lines fitted to a single scatter plot? (maybe events with lower luminosity distance create a smaller Hubble constant than events with higher luminosity distance?)
+23) Determine the predicted Hubble constant from the luminosity distance/redshift plot? Would there be a way to infer the Hubble constant from multiple lines fitted to a single scatter plot? (maybe events with lower luminosity distance create a smaller Hubble constant than events with higher luminosity distance?) ... would Dr. Q like to see a single scatter plot with multiple linear lines being fit to the data with slopes given by the Hubble constant assumed at that point? 
 
 -> Does the inferred Hubble constant change over O1-O3?
 
@@ -74,3 +72,5 @@ COMPLETED:
 20) Make own function to create KDEs (just to know how they work) 12/4/23 : I don't know how to smooth the line (it currently looks like a spiderweb). I'll just leave it alone for now. It's not that important. 
 
 3) Figure out what the coalescence phase is. 12/7/23: Coalescence phase (given in radians) refers to the phase of the waveform that the coalescence happened at (at what point along the cycle of the waveform did the coalescence happen?)
+
+15) How can we use this data for cosmological questions? (luminosity distances/redshift). How hard would it be to infer a Hubble constant from this? 
