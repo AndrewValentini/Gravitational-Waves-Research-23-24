@@ -1,49 +1,35 @@
-Tasks to complete during Thanksgiving break (written after 11/16/23 meeting):
-
-5) Specific to the mass1/mass2 scatter plot: maybe figure out a way to quantitatively determine how alligned O3 and O4's mass1 & mass2 data is to the line where mass1 = mass2. Visually, it looks like O4 is more aligned with the this line while the O3 data tends to have more events where mass1 is much higher than mass2
-
-6) Figure out a way to calculate luminosity distance for each event (so we have another parameter we can use to distinguish O3 from O4) or determine a way to get this directly from the data. We have this data for O1-O3 but it isn't given for O4. How can we determine it? 
-
-
 11/30/23
 
-11) CLEARLY define how we will determine the differences between 
-
-12) to the linear line: Dr. Q's thought: O4 seems more alligned to the m1 = m2 line. Does O4 have more BNS events? 
+11) CLEARLY define how we will determine the differences between the observing runs (we specifically want to answer if O4 is seeing more distant events)
 
 12/3/23
 
-16) Begin making t-SNE plots for the O1-O3 data (wait on O4... at least I know the parameters are the same for the GWTC data...they have luminosity distances too)
-
-17) Make more scatter plots for O1-O3 with parameters other than masses and snr. Try redshift, chi_sq, luminosity distances, etc. 
-
-18) Make t-SNE plot for O1-O4 with more parameters (first determine what the parameters ARE that can be used across all O1-O4... example: luminosity distance isn't defined for O4 but is for O1-O3). 
+16) Begin making t-SNE plots for the O1-O3 data (wait on O4... at least I know the parameters are the same for the GWTC data...they have luminosity distances too) 
 
 21) Determine statistical methods to quantify scatter plots that have a non-linear distribution (PCC and SCC are both used for determining how linear a line is). ChatGPT recommends: Regression models (you already know how to use these with numpy. Maybe figure out how to code them for yourself?), Local Methods (LOESS), Distance Metrics, Machine Learning models (Decision trees, random forests... would be overkill for our use case but would be good to learn how they work). 
 
-22) 12/10/23: WANT: to show that LIGO has been able to see more distant events with weaker signals and events whose physical properties make the generated waveform less apparent in the data. Followup: this woudl be a good way to anlayze WHAT physical properties make a GW signal weaker. I have shown that the distance away from equal component masses does not correspond to a weaker SNR (it looks like there is almost no correlation at all). Continue asking similar questions and figure out ways to answer them. 
-
+22) 12/10/23: WANT: to show that LIGO has been able to see more distant events with weaker signals and events whose physical properties make the generated waveform less apparent in the data. Followup: this would be a good way to anlayze WHAT physical properties make a GW signal weaker. I have shown that the distance away from equal component masses does not correspond to a weaker SNR (it looks like there is almost no correlation at all). Continue asking similar questions and figure out ways to answer them. 
 
 After 12/12/23 Meeting: 
-
-23) Determine the predicted Hubble constant from the luminosity distance/redshift plot? Would there be a way to infer the Hubble constant from multiple lines fitted to a single scatter plot? (maybe events with lower luminosity distance create a smaller Hubble constant than events with higher luminosity distance?) ... would Dr. Q like to see a single scatter plot with multiple linear lines being fit to the data with slopes given by the Hubble constant assumed at that point? 
-
--> Does the inferred Hubble constant change over O1-O3?
 
 24) Andrew : results from d(m_1 = m_2) do not normalize by masses. Results are not meaningful right now (still believe that there should be a inverse relationship between the distance away from this line and SNR). See what happens when you make distinct data for BNS and BBH events. (maybe use a log/log plot?)
 
 25) We expect that events with the same parameters would have a higher SNR from O1-O4. How can we test this hypothesis? (would like to attempt to answer before end of year)
 
 
+2/24/24: 
 
+26) The steps that I think should be taken:
 
+- Make scatter plot of SNR/sqrt(M_tot) versus luminosity distance for O3 events 
 
+- Fit a line to the plot. Check out the testing.ipynb file to see how I created a basic function to fit the data earlier. I think this is the best way of doing it. Once you have the function that fits this data, feed it the mass and SNR values for each event in O3. It should generate an inferred luminosity distance value. Compare the inferred luminosity distance value to the actual luminosity distance value. Make a scatter plot of this with the real luminosity distance values on the y-axis and the inferred values on the x-axis. It would be great if there was very little difference between these values (that there would be a linear trend in this plot)
 
+- If the function generating inferred luminosity distance values for O3 seems reasonable (if you get a linear trend in the inferred versus real luminosity distance scatter plot... see the previous point), then scale O4's SNR values. We have been assuming that O4 SNR/1.6 will allow us to compare the O4 events to those of O3. Reduce all of the SNR data in O4 events by this. Once this is done, use the same function created earlier to predict the luminosity distance values for the O4 events (give your function the mass and (reduced) SNR values of O4 events and let it generate a prediction for the luminosity distance of each event).
 
+- Now we can begin looking at BBH population differences across O3 and O4! 
 
-
-
-
+Note: maybe it's also reasonable to create simialr functions for O1 and O2 data? I dob't really think it is... ignore this for now.
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------
@@ -74,3 +60,18 @@ COMPLETED:
 3) Figure out what the coalescence phase is. 12/7/23: Coalescence phase (given in radians) refers to the phase of the waveform that the coalescence happened at (at what point along the cycle of the waveform did the coalescence happen?)
 
 15) How can we use this data for cosmological questions? (luminosity distances/redshift). How hard would it be to infer a Hubble constant from this? 
+
+17) Make more scatter plots for O1-O3 with parameters other than masses and snr. Try redshift, chi_sq, luminosity distances, etc. 
+
+6) Figure out a way to calculate luminosity distance for each event (so we have another parameter we can use to distinguish O3 from O4) or determine a way to get this directly from the data. We have this data for O1-O3 but it isn't given for O4. How can we determine it? 
+
+5) Specific to the mass1/mass2 scatter plot: maybe figure out a way to quantitatively determine how alligned O3 and O4's mass1 & mass2 data is to the line where mass1 = mass2. Visually, it looks like O4 is more aligned with the this line while the O3 data tends to have more events where mass1 is much higher than mass2
+
+12) to the linear line: Dr. Q's thought: O4 seems more alligned to the m1 = m2 line. Does O4 have more BNS events? 
+
+23) Determine the predicted Hubble constant from the luminosity distance/redshift plot? Would there be a way to infer the Hubble constant from multiple lines fitted to a single scatter plot? (maybe events with lower luminosity distance create a smaller Hubble constant than events with higher luminosity distance?) ... would Dr. Q like to see a single scatter plot with multiple linear lines being fit to the data with slopes given by the Hubble constant assumed at that point? 
+
+-> Does the inferred Hubble constant change over O1-O3?
+
+18) Make t-SNE plot for O1-O4 with more parameters (first determine what the parameters ARE that can be used across all O1-O4... example: luminosity distance isn't defined for O4 but is for O1-O3).
+
