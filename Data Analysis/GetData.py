@@ -165,6 +165,7 @@ O3_BBH["p_astro"] = O3_BBH["prob"]
 O3_BBH["network_matched_filter_snr"] = O3_BBH["snr"]
 O3_BBH["M_tot"] = O3_BBH["total_mass"]
 O3_BBH_all = O3_BBH
+O3_clean = O3_BBH
 
 O3_BNS["mass_1_source"] = O3_BNS["mass1"]
 O3_BNS["mass_2_source"] = O3_BNS["mass2"]
@@ -220,7 +221,6 @@ O3_events["M_tot"] = O3_events["total_mass"]
 O3_events_BBH["network_matched_filter_snr"] = O3_events_BBH["snr"]
 O3_events_BBH["combined_far"] = O3_events_BBH["far"]
 O3_events_BBH["M_tot"] = O3_events_BBH["total_mass"]
-O3_clean = O3_events_BBH
 
 O3_events_BNS["network_matched_filter_snr"] = O3_events_BNS["snr"]
 O3_events_BNS["combined_far"] = O3_events_BNS["far"]
