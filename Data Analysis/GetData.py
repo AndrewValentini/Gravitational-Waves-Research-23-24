@@ -241,3 +241,6 @@ O4_events_BNS["network_matched_filter_snr"] = O4_events_BNS["snr"]
 O4_events_BNS["combined_far"] = O4_events_BNS["far"]
 O4_events_BNS["M_tot"] = O4_events_BNS["total_mass"]
 O4_BNS = O4_events_BNS
+
+O3_all_predicted = pd.read_csv("../Data Analysis/PredictedData/O3_ALL_predicted.csv")
+O3_mock = pd.read_csv("../Data Analysis/PredictedData/O3_mock.csv")
