@@ -88,7 +88,7 @@ O3 = confident[confident['group'] == 3]
 O2 = confident[confident['group'] == 2]
 O1 = confident[confident['group'] == 1]
 
-O4_all = pd.read_csv("../Data/real_events_O4_ALL.csv")
+O4_all = pd.read_csv("../Data/O4_ALL_Feb_pull.csv")
 O4_all = O4_all[["eventid", "chirp_mass", "combined_far", "mass1", "mass2", "snr", "spin1z", "spin2z", "template_duration", "likelihood"]]
 O4_all["group"] = np.array([4 for _ in range(O4_all["eventid"].size)])
 O4_all["group_name"] = np.array(["O" + str(group) for group in O4_all["group"]])
@@ -244,3 +244,4 @@ O4_BNS = O4_events_BNS
 
 O3_all_predicted = pd.read_csv("../Data Analysis/PredictedData/O3_ALL_predicted.csv")
 O3_mock = pd.read_csv("../Data Analysis/PredictedData/O3_mock.csv")
+O4_BBH_predicted = pd.read_csv("../Data Analysis/PredictedData/O4_BBH_predicted_distance.csv")
