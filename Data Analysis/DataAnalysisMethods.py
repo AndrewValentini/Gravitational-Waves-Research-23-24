@@ -101,10 +101,10 @@ def colors(n_colors : int):
 
 
 # Fines the slope of the line of best fit with a given y-intercept. Returns that slope.
-def fit_slope(df : pd.DataFrame, x_feature_name : str, y_feature_name : str, y_intercept : int = 0) -> float:
-    y_reduced = df[y_feature_name] - y_intercept
+def fit_slope(x_feature, y_feature : str, y_intercept : int = 0) -> float:
+    y_reduced = y_feature - y_intercept
     
-    x = df[x_feature_name][:,np.newaxis]
+    x = x_feature[:,np.newaxis]
     a, _, _, _ = np.linalg.lstsq(x, y_reduced, rcond=None)
     
     return a[0]
