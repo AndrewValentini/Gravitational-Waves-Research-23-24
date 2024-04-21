@@ -27,14 +27,17 @@ def extract_confidence(group):
         return 1
     return 0
 
+GWTC_features = ["name", "simple_name", "catalog", "confidence", "version", "group_name", "group", "GPS", "far", "network_matched_filter_snr", "network_matched_filter_snr_lower", "network_matched_filter_snr_upper", "mass_1_source", "mass_2_source", "chirp_mass_source", "chirp_mass_source_lower", "chirp_mass_source_upper", "redshift", "redshift_lower", "redshift_upper", "luminosity_distance", "luminosity_distance_lower", "luminosity_distance_upper", "p_astro", "chi_eff"]
+rename_dict = {"p_astro": "prob", "chi_eff": "effective_spin", "network_matched_filter_snr": "snr", "GPS": "gps", "chirp_mass_source": "chirp_mass", "mass_1_source": "mass1", "mass_2_source": "mass2", "combined_far": "far"}
+
 O3_all = pd.read_csv("../Data/GWTC-3.csv")
 O3_all["simple_name"] = np.array([simplify_name(name) for name in O3_all["name"]])
 O3_all["group"] = np.array([3 for _ in range(O3_all["name"].size)])
 O3_all["catalog"] = np.array([extract_group(shortname) for shortname in O3_all["catalog.shortName"]])
 O3_all["confidence"] = np.array([extract_confidence(group) for group in O3_all["catalog"]])
 O3_all["group_name"] = np.array(["O" + str(group) for group in O3_all["group"]])
-O3_all = O3_all[["name", "simple_name", "catalog", "confidence", "version", "group_name", "group", "GPS", "far", "network_matched_filter_snr", "mass_1_source", "mass_2_source", "chirp_mass_source", "redshift", "luminosity_distance", "p_astro", "chi_eff"]]
-O3_all = O3_all.rename(columns={"p_astro": "prob", "chi_eff": "effective_spin", "network_matched_filter_snr": "snr", "GPS": "gps", "mass_1_source": "mass1", "mass_2_source": "mass2", "chirp_mass_source": "chirp_mass", "combined_far": "far"})
+O3_all = O3_all[GWTC_features]
+O3_all = O3_all.rename(columns=rename_dict)
 
 O2_confident = pd.read_csv("../Data/GWTC-2_1-confident.csv")
 O2_confident["simple_name"] = np.array([simplify_name(name) for name in O2_confident["name"]])
@@ -42,8 +45,8 @@ O2_confident["group"] = np.array([2 for _ in range(O2_confident["name"].size)])
 O2_confident["group_name"] = np.array(["O" + str(group) for group in O2_confident["group"]])
 O2_confident["catalog"] = np.array([extract_group(shortname) for shortname in O2_confident["catalog.shortName"]])
 O2_confident["confidence"] = np.array([extract_confidence(group) for group in O2_confident["catalog"]])
-O2_confident = O2_confident[["name", "simple_name", "catalog", "confidence", "version", "group_name", "group", "GPS", "far", "network_matched_filter_snr", "mass_1_source", "mass_2_source", "chirp_mass_source", "redshift", "luminosity_distance", "p_astro", "chi_eff"]]
-O2_confident = O2_confident.rename(columns={"p_astro": "prob", "chi_eff": "effective_spin", "network_matched_filter_snr": "snr", "GPS": "gps", "mass_1_source": "mass1", "mass_2_source": "mass2", "chirp_mass_source": "chirp_mass", "combined_far": "far"})
+O2_confident = O2_confident[GWTC_features]
+O2_confident = O2_confident.rename(columns=rename_dict)
 
 O2_marginal = pd.read_csv("../Data/GWTC-2_1-marginal.csv")
 O2_marginal["simple_name"] = np.array([simplify_name(name) for name in O2_marginal["name"]])
@@ -51,8 +54,8 @@ O2_marginal["group"] = np.array([2 for _ in range(O2_marginal["name"].size)])
 O2_marginal["group_name"] = np.array(["O" + str(group) for group in O2_marginal["group"]])
 O2_marginal["catalog"] = np.array([extract_group(shortname) for shortname in O2_marginal["catalog.shortName"]])
 O2_marginal["confidence"] = np.array([extract_confidence(group) for group in O2_marginal["catalog"]])
-O2_marginal = O2_marginal[["name", "simple_name", "catalog", "confidence", "version", "group_name", "group", "GPS", "far", "network_matched_filter_snr", "mass_1_source", "mass_2_source", "chirp_mass_source", "redshift", "luminosity_distance", "p_astro", "chi_eff"]]
-O2_marginal = O2_marginal.rename(columns={"p_astro": "prob", "chi_eff": "effective_spin", "network_matched_filter_snr": "snr", "GPS": "gps", "mass_1_source": "mass1", "mass_2_source": "mass2", "chirp_mass_source": "chirp_mass", "combined_far": "far"})
+O2_marginal = O2_marginal[GWTC_features]
+O2_marginal = O2_marginal.rename(columns=rename_dict)
 
 O2_auxiliary = pd.read_csv("../Data/GWTC-2_1-auxiliary.csv")
 O2_auxiliary["simple_name"] = np.array([simplify_name(name) for name in O2_auxiliary["name"]])
@@ -60,8 +63,8 @@ O2_auxiliary["group"] = np.array([2 for _ in range(O2_auxiliary["name"].size)])
 O2_auxiliary["group_name"] = np.array(["O" + str(group) for group in O2_auxiliary["group"]])
 O2_auxiliary["catalog"] = np.array([extract_group(shortname) for shortname in O2_auxiliary["catalog.shortName"]])
 O2_auxiliary["confidence"] = np.array([extract_confidence(group) for group in O2_auxiliary["catalog"]])
-O2_auxiliary = O2_auxiliary[["name", "simple_name", "catalog", "confidence", "version", "group_name", "group", "GPS", "far", "network_matched_filter_snr", "mass_1_source", "mass_2_source", "chirp_mass_source", "redshift", "luminosity_distance", "p_astro", "chi_eff"]]
-O2_auxiliary = O2_auxiliary.rename(columns={"p_astro": "prob", "chi_eff": "effective_spin", "network_matched_filter_snr": "snr", "GPS": "gps", "mass_1_source": "mass1", "mass_2_source": "mass2", "chirp_mass_source": "chirp_mass", "combined_far": "far"})
+O2_auxiliary = O2_auxiliary[GWTC_features]
+O2_auxiliary = O2_auxiliary.rename(columns=rename_dict)
 
 O1_all = pd.read_csv("../Data/GWTC-1.csv")
 O1_all["simple_name"] = np.array([simplify_name(name) for name in O1_all["name"]])
@@ -69,8 +72,8 @@ O1_all["group"] = np.array([1 for _ in range(O1_all["name"].size)])
 O1_all["catalog"] = np.array([extract_group(shortname) for shortname in O1_all["catalog.shortName"]])
 O1_all["confidence"] = np.array([extract_confidence(group) for group in O1_all["catalog"]])
 O1_all["group_name"] = np.array(["O" + str(group) for group in O1_all["group"]])
-O1_all = O1_all[["name", "simple_name", "catalog", "confidence", "version", "group_name", "group", "GPS", "far", "network_matched_filter_snr", "mass_1_source", "mass_2_source", "chirp_mass_source", "redshift", "luminosity_distance", "p_astro", "chi_eff"]]
-O1_all = O1_all.rename(columns={"p_astro": "prob", "chi_eff": "effective_spin", "network_matched_filter_snr": "snr", "GPS": "gps", "mass_1_source": "mass1", "mass_2_source": "mass2", "chirp_mass_source": "chirp_mass", "combined_far": "far"})
+O1_all = O1_all[GWTC_features]
+O1_all = O1_all.rename(columns=rename_dict)
 
 observations = pd.concat([O3_all, O2_confident, O2_marginal, O2_auxiliary, O1_all])
 
