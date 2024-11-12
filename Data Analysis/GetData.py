@@ -245,6 +245,26 @@ O4_events_BNS["combined_far"] = O4_events_BNS["far"]
 O4_events_BNS["M_tot"] = O4_events_BNS["total_mass"]
 O4_BNS = O4_events_BNS
 
+raw_o4 = pd.read_csv("C:/Users/lucas/GraveTeamMain/Gravitational-Waves-Research-23-24/Data/Wiki_Ligo_O4.csv")
+raw_o4 = raw_o4[raw_o4["Luminosity Distance"] != "?"]
+raw_o4["Class BH/BH"] = np.array([float(str(c).strip("~")) for c in raw_o4["Class BH/BH"]])
+raw_o4 = raw_o4[raw_o4["Class BH/BH"] > 0.95]
+LD = raw_o4["Luminosity Distance"]
+raw_o4["Luminosity Distance Error"] = np.array([float(str(d).split("±")[1]) for d in LD])
+raw_o4["Luminosity Distance"] = np.array([float(str(d).split("±")[0]) for d in LD])
+values = np.zeros(len(O4_BBH["M_tot"]))
+values2 = np.zeros(len(O4_BBH["M_tot"]))
+count = len(raw_o4["Luminosity Distance"])
+for i, name in enumerate(raw_o4["GW event"].to_numpy()):
+    for j, id in enumerate(O4_BBH["eventid"].to_numpy()):
+        if id == name:
+            values[j] = raw_o4["Luminosity Distance"].to_numpy()[i]
+            values2[j] = raw_o4["Luminosity Distance Error"].to_numpy()[i]
+            break
+O4_BBH["luminosity_distance"] = values
+O4_BBH["luminosity_distance_error"] = values2
+O4_BBH = O4_BBH[O4_BBH["luminosity_distance"] > 0]
+
 O3_all_predicted = pd.read_csv("../Data Analysis/PredictedData/O3_ALL_predicted.csv")
 O3_mock = pd.read_csv("../Data Analysis/PredictedData/O3_mock.csv")
 O4_BBH_predicted = pd.read_csv("../Data Analysis/PredictedData/O4_BBH_predicted_distance.csv")
